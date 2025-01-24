@@ -53,10 +53,12 @@ export default {
       let user = await axios.get(`http://localhost:3000/user?email=${this.email}&password=${this.password}`);
       console.log(this.email,this.password)
       console.log(user)
-      if (user.status==200 && user.data.length>0) {
+      if (user.status==200 && user.data.length==1) {
         localStorage.setItem("User",JSON.stringify(user.data))
         this.$router.push({ name: "Home" });
-      } else {
+      } else if(this.email=='' || this.password == '') {
+        alert("Enter Email or Password");
+      }else {
         alert("Invalid Email or Password");
       }
     },

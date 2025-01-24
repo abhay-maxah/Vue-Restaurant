@@ -15,27 +15,9 @@
       "age": "30"
     },
     {
-      "id": "dd6c",
-      "email": "",
-      "password": "",
-      "name": ""
-    },
-    {
       "id": "1c95",
       "email": "sam@gmail.com",
       "password": "abc",
-      "name": "sam"
-    },
-    {
-      "id": "fc37",
-      "email": "",
-      "password": "",
-      "name": ""
-    },
-    {
-      "id": "dc48",
-      "email": "",
-      "password": "",
       "name": "sam"
     }
   ],

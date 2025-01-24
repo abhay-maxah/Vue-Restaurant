@@ -59,20 +59,25 @@ export default {
   },
   methods: {
    async Signup() {
-      console.log("click");
+    try{
       let user = await axios.post("http://localhost:3000/user", {
         email: this.email,
         password: this.password,
         name: this.name,
-      });
-      console.log(user)
-      if(user.status==201){
+      });      
+      if(user.status==201 && user.data.email != '' && user.data.password != '' && user.data.name != ''){
         console.log("User Created")
         localStorage.setItem("User",JSON.stringify(user.data))
         //change a route from sign-up to Home
         this.$router.push({name:'Home'})
+      }else if(this.email=='' || this.password == '') {
+        alert("Enter Email or Password");
+      }else {
+        alert("Invalid Email or Password");
       }
-    },
+    }catch(e){
+      console.log(e)
+    }
   },
     mounted(){
       //if user is sign up then goes to home Page
