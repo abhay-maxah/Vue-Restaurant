@@ -38,12 +38,12 @@
         placeholder="Password"
       /><br />
       <button type="button" v-on:click="Signup()" class="btn btn-secondary">
-        Sign up       
+        Sign up
       </button>
-      <button type="button"  class="btn btn-secondary btnn">
-        <router-link to="/login">Login</router-link>  </button>
+      <button type="button" class="btn btn-secondary btnn">
+        <router-link to="/login">Login</router-link>
+      </button>
     </div>
-    
   </div>
 </template>
 <script>
@@ -58,35 +58,32 @@ export default {
     };
   },
   methods: {
-   async Signup() {
-    try{
+    async Signup() {
       let user = await axios.post("http://localhost:3000/user", {
         email: this.email,
         password: this.password,
         name: this.name,
-      });      
-      if(user.status==201 && user.data.email != '' && user.data.password != '' && user.data.name != ''){
+      });
+      if (user.status == 201 && user.data.email != '' && user.data.password != '' && user.data.name != '') {
         console.log("User Created")
-        localStorage.setItem("User",JSON.stringify(user.data))
+        localStorage.setItem("User", JSON.stringify(user.data))
         //change a route from sign-up to Home
-        this.$router.push({name:'Home'})
-      }else if(this.email=='' || this.password == '') {
+        this.$router.push({ name: 'Home' })
+      } else if (this.email == '' || this.password == '') {
         alert("Enter Email or Password");
-      }else {
+      } else {
         alert("Invalid Email or Password");
       }
-    }catch(e){
-      console.log(e)
-    }
-  },
-    mounted(){
+    },
+    mounted() {
       //if user is sign up then goes to home Page
-    let user = localStorage.getItem("User");
-    if(user){
-      this.$router.push({name:'Home'})
+      let user = localStorage.getItem("User");
+      if (user) {
+        this.$router.push({ name: 'Home' })
       }
+    }
   }
-};
+  }
 </script>
 <style>
 .logo {
@@ -95,8 +92,9 @@ export default {
   width: 100px;
   height: auto;
 }
-.btnn{
-  color:white;
+
+.btnn {
+  color: white;
   margin-left: 60px;
 }
 </style>

@@ -19,20 +19,20 @@
       "email": "sam@gmail.com",
       "password": "abc",
       "name": "sam"
+    },
+    {
+      "id": "6642",
+      "email": "",
+      "password": "",
+      "name": ""
     }
   ],
   "resto": [
     {
-      "name": "Resto2",
-      "address": "we",
-      "phone": "123456",
-      "id": "2"
-    },
-    {
-      "id": "b2c1",
+      "id": "4182",
       "name": "resto3",
       "address": "fd",
-      "phone": "1234678"
+      "phone": "1234"
     }
   ]
 }
