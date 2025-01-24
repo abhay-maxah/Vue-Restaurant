@@ -1,0 +1,56 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Adam",
+      "email": "abc1@gamil.com",
+      "password": "abc",
+      "age": "25"
+    },
+    {
+      "id": "2",
+      "name": "Eve",
+      "email": "abc@gamil.com",
+      "password": "abc",
+      "age": "30"
+    },
+    {
+      "id": "dd6c",
+      "email": "",
+      "password": "",
+      "name": ""
+    },
+    {
+      "id": "1c95",
+      "email": "sam@gmail.com",
+      "password": "abc",
+      "name": "sam"
+    },
+    {
+      "id": "fc37",
+      "email": "",
+      "password": "",
+      "name": ""
+    },
+    {
+      "id": "dc48",
+      "email": "",
+      "password": "",
+      "name": "sam"
+    }
+  ],
+  "resto": [
+    {
+      "name": "Resto2",
+      "address": "we",
+      "phone": "123456",
+      "id": "2"
+    },
+    {
+      "id": "b2c1",
+      "name": "resto3",
+      "address": "fd",
+      "phone": "1234678"
+    }
+  ]
+}
